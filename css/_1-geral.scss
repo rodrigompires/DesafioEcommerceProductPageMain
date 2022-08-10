@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;700&display=swap');
+
+// Tipografia
+$FontSize: 16px;
+
+
+// Cores
+
+$Orange: hsl(26, 100%, 55%);
+$PaleOrange: hsl(25, 100%, 94%);
+
+
+$VeryVarkBlue: hsl(220, 13%, 13%);
+$DarkGrayishBlue: hsl(219, 9%, 45%);
+$GrayishBlue: hsl(220, 14%, 75%);
+$LightGrayishBlue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+// - Black (with 75% opacity for lightbox background): 
+$Black: hsla(0, 0%, 0%, .75);
+$White2: hsla(255, 100%, 100%, .75);
+
+
+$colorDarkModeElements: hsl(209, 23%, 22%);
+$colorDarkModeBackground: hsl(207, 26%, 17%);
+$colorDarkModeText_LightModeElements: hsl(0, 0%, 100%);
+$colorLightModeInput: hsl(0, 0%, 52%);
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    
+}
+
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;
+    transition: all .5s ease;  
+}

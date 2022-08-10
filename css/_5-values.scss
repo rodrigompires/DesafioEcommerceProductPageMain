@@ -1,0 +1,42 @@
+.prices {
+    padding: .1rem 1.48rem 1.52rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: .05rem;
+
+    .infosPrice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .9rem;
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: .05rem;
+            
+        }
+
+        .discount {
+            color: $Orange;
+            font-weight: 600;
+            padding: .1rem .6rem;
+            background-color: $PaleOrange;
+            
+            border-radius: 6px;
+        }
+
+    }
+
+    .oldPrice {
+        font-weight: 800;
+        color: $GrayishBlue;
+        margin-right: .08rem;
+        margin-bottom: .3rem;
+        text-decoration: line-through;
+        letter-spacing: .05rem;
+
+        
+    }
+}

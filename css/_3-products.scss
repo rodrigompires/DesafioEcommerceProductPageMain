@@ -1,0 +1,48 @@
+.products {
+    position: relative;
+
+     .largeProduct {
+        overflow: hidden;
+        height: 299px;
+        object-fit: cover;
+        
+        
+        .product {
+            width: 100%;
+            position: relative;
+            bottom: 12.1%;
+            object-fit: cover;
+            z-index: -1;
+           
+        }
+
+        .iconNext {
+            right: 3.8%;
+        }
+
+        .iconPrevious {
+            left: 3.8%;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            // top: 34%;
+            top: 42%;
+            background-color: $White;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+
+            img {
+                width: .6rem;
+            }
+
+            
+        }
+     }
+}

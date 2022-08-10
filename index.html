@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="50">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="header">
+      <div class="menu">
+        <img src="/images/icon-menu.svg" alt="Imagem do menu tipo hamburguer" class="hbMenu">
+        <img src="/images/logo.svg" alt="Logotipo da marca escrito Sneakers" class="logoImg">
+
+        <nav class="navMenu">
+          <div class="subMenu">
+            <img src="/images/icon-close.svg" alt="Icone de um X representando o botão de fechar o menu"
+              class="iconClose">
+
+            <ul>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="purchases">
+        <div class="divCart">
+          <img src="/images/icon-cart.svg" alt="Imagem representando um carrinho de compras" class="imgCart">
+          <div class="quantities"></div>
+        </div>
+
+        <img src="/images/image-avatar.png" alt="Foto ilustrativa de um homem" class="imgAvatar">
+        <p class="hide">Dark Mode</p>
+      </div>
+
+      <div class="containerCart">
+        <div class="headerCart">Cart</div>
+        <div class="productsInCart">
+          <div class="item">
+            <img src="/images/image-product-1-thumbnail.jpg" alt="Imagem tenis tamanho pequeno" class="thumbProduct">
+            <div class="detailsItem">
+              <div class="nameProduct">Autumn Limited Edition...</div>
+              <div class="pricesItem">
+                <div class="priceItem">$125.00</div> x
+                <div class="unitsItem">3</div>
+                <div class="totalItem">$375.00</div>
+              </div>
+            </div>
+            <img src="/images/icon-delete.svg" alt="Imagem de uma lixeira" class="iconDelete">
+          </div>
+        </div>
+        <div class="empty">Your cart is empty.</div>
+        <div class="btnCheckout">Checkout</div>
+      </div>
+
+
+    </header>
+
+    <div class="about">
+
+      <div class="products">
+        <div class="largeProduct">
+          <img src="/images/image-product-1.jpg" alt="Imagem tenis" class="product">
+          <div class="iconNext icons">
+            <img src="/images/icon-next.svg" alt="Icone de uma seta para direita" class="nextIcon">
+          </div>
+          <div class="iconPrevious icons">
+            <img src="/images/icon-previous.svg" alt="Icone de uma seta para esquerda" class="previousIcon">
+          </div>
+
+          <div class="thumbs">
+            <div class="imgsThumbs">
+              <div class="pics">
+                <img src="/images/image-product-1-thumbnail.jpg" alt="" class="picThumbs">
+              </div>
+              <div class="pics">
+                <img src="/images/image-product-2-thumbnail.jpg" alt="" class="picThumbs">
+              </div>
+              <div class="pics">
+                <img src="/images/image-product-3-thumbnail.jpg" alt="" class="picThumbs">
+              </div>
+              <div class="pics">
+                <img src="/images/image-product-4-thumbnail.jpg" alt="" class="picThumbs">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="containerDescr">
+        <div class="descriptions">
+          <div class="nameCompany">Sneaker Company</div>
+          <div class="title">Fall Limited Edition Sneakers</div>
+          <div class="productDescription">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </div>
+        </div>
+
+
+
+        <div class="prices">
+          <div class="infosPrice">
+            <div class="price">$125.00</div>
+            <div class="discount">50%</div>
+          </div>
+          <div class="oldPrice">$250.00</div>
+        </div>
+
+
+
+        <div class="btns">
+          <div class="addProducts">
+            <img src="/images/icon-minus.svg" alt="Icone com sinal de menos" class="iconMinus">
+            <div class="addNumber">0</div>
+            <img src="/images/icon-plus.svg" alt="Icone com sinal de menos" class="iconPlus">
+          </div>
+
+          <div class="btnAdd">
+            <img src="/images/icon-cart-w.svg" alt="Imagem de um carrinho de compras" class="iconCart">
+            <p class="textAdd">Add to cart</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="backgroundPage show">
+        <span class="bkgBtnClose">
+          <img src="/images/icon-close.svg" alt="Icone de um X representando o botão de fechar">
+        </span>
+      </div>
+
+    </div>
+
+    <div class="attribution">
+      <div>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</div>
+      <div class="footer"><span>Coded by </span>  
+        
+        <p class="nameAuthor typeAnimation"><a target="_blank" href="https://github.com/rodrigompires/DesafioEcommerceProductPageMain" class="name">Rodrigo Pires.</a></p>
+      
+      </div>
+    </div>
+
+
+  </main>
+
+  <script src="/js/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+body.dark {
+    background-color: $colorDarkModeElements;
+    transition: all .5s ease;
+
+    .hide {
+        color: $colorDarkModeText_LightModeElements;
+    }
+
+    .title {
+        color: $colorDarkModeText_LightModeElements;
+
+    }
+
+    .header {
+
+        .menu {
+
+            .navMenu {
+                background-color: $White2;
+
+                .subMenu {
+                    background-color: $colorDarkModeElements;
+
+                    ul {
+                        background-color: $colorDarkModeElements;
+
+                        a {
+                            color: $PaleOrange;
+                        }
+
+                    }
+                }
+
+                .iconClose {
+                    filter: brightness(2000%);
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+    .productDescription {
+        color: $colorLightModeInput;
+    }
+
+    .prices {
+
+        .infosPrice {
+
+            .price {
+                color: $PaleOrange;
+            }
+
+            .discount {
+                background-color: $Orange;
+                color: $PaleOrange;
+
+
+            }
+        }
+
+    }
+
+
+
+    .imgCart {
+        filter: brightness(2000%);
+
+    }
+
+
+    .hbMenu {
+        filter: brightness(2000%);
+
+    }
+
+    .logoImg {
+        filter: brightness(1500%);
+    }
+
+    .attribution {
+        a {
+            color: $PaleOrange;
+        }
+    }
+
+    .containerCart {
+        background-color: $colorDarkModeBackground;
+        box-shadow: 0 0 5px rgba(255, 255, 255, .2);
+
+        .headerCart {
+            color: $White;
+        }
+
+        .empty {
+            color: $PaleOrange;
+
+        }
+
+        .nameProduct,
+        .priceItem,
+        .unitsItem {
+            color: $PaleOrange;
+
+        }
+
+        .totalItem {
+            color: unset;
+            color: $White;
+        }
+    }
+}

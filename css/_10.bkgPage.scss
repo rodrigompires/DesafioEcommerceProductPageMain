@@ -1,0 +1,70 @@
+.backgroundPage {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    background-color: $Black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .bkgBtnClose {
+
+        img {
+            cursor: pointer;
+            padding: 1rem 1rem 0 1rem;
+            margin-left: 24rem;
+            filter: brightness(300%);
+        }
+        
+    }
+
+
+    .products {
+        width: 30rem;
+        padding: unset;
+
+        .largeProduct {
+
+            .icons {
+                display: flex;
+                position: unset;
+                top: unset;
+                position: absolute;
+                top: 35%;
+                
+                .previousIcon, .nextIcon {
+
+                    &:hover {
+                        filter: opacity(0.4) drop-shadow(0 0 0 red);
+
+                    }
+                }
+            }
+
+            .iconNext {
+                right: unset;
+                right: 5%;
+                
+            }
+    
+            .iconPrevious {
+                left: -3%;
+            }
+
+
+
+        }
+
+        
+    }
+
+
+    &.show {
+        display: none;
+    }
+}

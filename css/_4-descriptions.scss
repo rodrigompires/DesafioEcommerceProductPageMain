@@ -1,0 +1,31 @@
+.descriptions {
+        padding: 1.4rem 1.48rem 1.52rem 1.4rem;
+
+    .nameCompany {
+        color: $Orange;
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 700;
+        letter-spacing: .07rem;
+
+    }
+
+    .title {
+        font-size: 1.76rem;
+        font-weight: 700;
+        margin-top: 12px;
+        line-height: 2.09rem;
+        margin-left: .05rem;
+        color: $VeryVarkBlue;
+    }
+
+    .productDescription {
+        padding-right: .2rem;
+        margin-top: 1.1rem;
+        font-size: .942rem;
+        font-weight: 500;
+        color: $DarkGrayishBlue;
+        line-height: 1.5rem;
+        margin-left: .05rem;  
+    }
+}

@@ -1,0 +1,146 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .header {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.8rem 13.7rem 1.8rem 13.7rem;
+        border-bottom: 1px solid black;
+        position: relative;
+
+        .menu {
+
+            .logo {
+                width: 7.9rem;
+            }
+        }
+
+        .purchases {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+
+
+            .divCart {
+
+
+                .imgCart {}
+            }
+
+            .imgAvatar {
+                width: 2.8rem;
+            }
+
+        }
+
+        .navMenu {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 24.7rem;
+            top: 2.2rem;
+
+            .subMenu {
+
+
+                .iconClose {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+                    list-style: none;
+                    gap: 1.82rem;
+
+                    a {
+                        text-decoration: none;
+                        font-size: .86rem;
+                        color: $DarkGrayishBlue;
+                        font-weight: 500;
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+
+    .hbMenu {
+        display: none;
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+        padding: 5.1rem 16.7rem 1.8rem 16.46rem;
+        .products {
+            // padding: 5.1rem 16.7rem 1.8rem 16.46rem;
+        // border: 1px solid black;
+        
+       
+    
+
+
+        
+
+
+
+            .largeProduct {
+  
+        overflow: hidden;
+        object-fit: contain;
+        width: 106%;
+     
+
+
+                
+                
+                // width: 44.2%;
+                // overflow: hidden;
+                // border-radius: 15px;
+
+                .product {
+                    width: 100%;
+                    object-fit: contain;
+        border-radius: 15px;
+
+                    
+                    // width: 100%;
+                    // object-fit: cover;
+                    // border-radius: 15px;
+
+
+                }
+            }
+
+            .icons {
+                display: none;
+            }
+        }
+
+        .descriptions {
+            border: 1px solid red;
+            margin-left: 250px;
+        }
+    }
+}
+
+
+
+.containerCart {
+    display: none;
+}
+
+.navMenu {
+    display: none;
+}

@@ -1,0 +1,813 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  min-width: 375px;
+  max-width: 1440px;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1.1rem 1.48rem 1.52rem 1.48rem;
+}
+.header .hide {
+  display: none;
+  position: absolute;
+  font-size: 0.5rem;
+  left: 1.7rem;
+  top: 1.8rem;
+}
+.header .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.header .menu .logoImg {
+  cursor: pointer;
+}
+.header .menu .hbMenu {
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+.header .purchases {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.48rem;
+  position: relative;
+}
+.header .purchases .imgAvatar {
+  width: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.header .purchases .imgCart {
+  cursor: pointer;
+  margin-top: 0.2rem;
+}
+.header .purchases .quantities {
+  position: absolute;
+  bottom: 1rem;
+  right: 2.6rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(26deg, 100%, 55%);
+  padding: 0.001rem 0.4rem 0.001rem 0.4rem;
+  border-radius: 0.4rem;
+}
+.header .navMenu {
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: none;
+  z-index: 2;
+}
+.header .navMenu .subMenu {
+  background-color: hsl(0deg, 0%, 100%);
+  height: 100%;
+  width: 66.8%;
+  padding: 1.2rem 0 0 1.5rem;
+}
+.header .navMenu .subMenu ul {
+  font-size: 1.13rem;
+  font-weight: 600;
+  list-style: none;
+  padding-top: 2.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.49rem;
+}
+.header .navMenu .subMenu ul li a {
+  text-decoration: none;
+  color: hsl(220deg, 13%, 13%);
+  cursor: pointer;
+}
+.header .navMenu .subMenu ul li a:hover {
+  text-decoration: underline;
+  transition: all 0.5s ease;
+  opacity: 0.8;
+}
+.header .navMenu.show {
+  display: block;
+  animation: showMenu 0.5s ease;
+}
+
+@keyframes showMenu {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.products {
+  position: relative;
+}
+.products .largeProduct {
+  overflow: hidden;
+  height: 299px;
+  object-fit: cover;
+}
+.products .largeProduct .product {
+  width: 100%;
+  position: relative;
+  bottom: 12.1%;
+  object-fit: cover;
+  z-index: -1;
+}
+.products .largeProduct .iconNext {
+  right: 3.8%;
+}
+.products .largeProduct .iconPrevious {
+  left: 3.8%;
+}
+.products .largeProduct .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 42%;
+  background-color: hsl(0deg, 0%, 100%);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.products .largeProduct .icons img {
+  width: 0.6rem;
+}
+
+.descriptions {
+  padding: 1.4rem 1.48rem 1.52rem 1.4rem;
+}
+.descriptions .nameCompany {
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.07rem;
+}
+.descriptions .title {
+  font-size: 1.76rem;
+  font-weight: 700;
+  margin-top: 12px;
+  line-height: 2.09rem;
+  margin-left: 0.05rem;
+  color: hsl(220deg, 13%, 13%);
+}
+.descriptions .productDescription {
+  padding-right: 0.2rem;
+  margin-top: 1.1rem;
+  font-size: 0.942rem;
+  font-weight: 500;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 1.5rem;
+  margin-left: 0.05rem;
+}
+
+.prices {
+  padding: 0.1rem 1.48rem 1.52rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 0.05rem;
+}
+.prices .infosPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.9rem;
+}
+.prices .infosPrice .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+.prices .infosPrice .discount {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 600;
+  padding: 0.1rem 0.6rem;
+  background-color: hsl(25deg, 100%, 94%);
+  border-radius: 6px;
+}
+.prices .oldPrice {
+  font-weight: 800;
+  color: hsl(220deg, 14%, 75%);
+  margin-right: 0.08rem;
+  margin-bottom: 0.3rem;
+  text-decoration: line-through;
+  letter-spacing: 0.05rem;
+}
+
+.btns {
+  padding: 0.1rem 1.48rem 1.52rem 1.4rem;
+}
+.btns .addProducts {
+  background-color: hsl(223deg, 64%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+  border-radius: 10px;
+}
+.btns .addProducts .iconMinus, .btns .addProducts .iconPlus {
+  cursor: pointer;
+}
+.btns .addProducts .addNumber {
+  font-weight: 700;
+}
+.btns .btnAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 9px;
+  margin-top: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 15px hsl(26deg, 100%, 55%);
+}
+.btns .btnAdd .iconCart {
+  color: white;
+  gap: 1rem;
+  width: 1.1rem;
+}
+.btns .btnAdd .textAdd {
+  font-weight: 600;
+}
+
+.attribution {
+  padding: 0.1rem 1.48rem 1.52rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: hsl(220deg, 14%, 75%);
+}
+.attribution .footer {
+  display: flex;
+  gap: 0.3rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(220deg, 13%, 13%);
+}
+.attribution .nameAuthor {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid hsl(26deg, 100%, 55%);
+}
+.attribution .nameAuthor .name {
+  color: hsl(26deg, 100%, 55%);
+}
+.attribution .typeAnimation {
+  animation: cursor 400ms steps(10) infinite normal;
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: hsl(26deg, 100%, 55%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.containerCart {
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+  left: 0.5rem;
+  top: 4.8rem;
+  width: 95.8%;
+  z-index: 3;
+  border-radius: 10px;
+  display: none;
+}
+.containerCart .headerCart {
+  padding: 1.4rem 1.48rem 1.5rem 1.4rem;
+  border-bottom: 1px solid hsl(220deg, 14%, 75%);
+  font-weight: 700;
+}
+.containerCart .empty {
+  text-align: center;
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 700;
+  padding: 4.85rem 0 5.8rem 0;
+  display: block;
+}
+.containerCart .btnCheckout {
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+  margin: 1.48rem;
+  font-weight: 700;
+  padding: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+}
+.containerCart.open {
+  display: block;
+  animation: open 0.5s ease;
+}
+.containerCart .productsInCart {
+  display: none;
+}
+.containerCart .productsInCart .item {
+  margin: 1.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerCart .productsInCart .item .thumbProduct {
+  width: 3.1rem;
+  border-radius: 4px;
+}
+.containerCart .productsInCart .item .iconDelete {
+  cursor: pointer;
+}
+.containerCart .productsInCart .detailsItem {
+  color: hsl(219deg, 9%, 45%);
+  font-size: 1rem;
+  margin-right: 1.8rem;
+}
+.containerCart .productsInCart .detailsItem .pricesItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  line-height: 2rem;
+  font-size: 1.02rem;
+}
+.containerCart .productsInCart .detailsItem .pricesItem .totalItem {
+  font-weight: bold;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 78%;
+    margin: 0 auto;
+  }
+  .container .header {
+    padding: 1.6rem 3.8rem 2rem 3.8rem;
+    border-bottom: 1px solid hsl(220deg, 14%, 75%);
+  }
+  .container .header .hide {
+    left: 4rem;
+    top: 3rem;
+  }
+  .container .header .menu {
+    z-index: 0;
+  }
+  .container .header .menu .logoImg {
+    width: 7.8rem;
+  }
+  .container .header .menu .hbMenu {
+    display: none;
+  }
+  .container .header .menu .navMenu {
+    display: block;
+    position: unset;
+    height: unset;
+    animation: unset;
+  }
+  .container .header .menu .navMenu .subMenu {
+    width: unset;
+    padding: 0;
+  }
+  .container .header .menu .navMenu .subMenu .iconClose {
+    display: none;
+  }
+  .container .header .menu .navMenu .subMenu ul {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    margin-left: 3.14rem;
+    gap: 1.81rem;
+  }
+  .container .header .menu .navMenu .subMenu ul a {
+    color: hsl(219deg, 9%, 45%);
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+  }
+  .container .header .menu .navMenu .subMenu ul a:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: hsl(26deg, 100%, 55%);
+    position: relative;
+    top: 2.9rem;
+  }
+  .container .header .purchases {
+    gap: 2.5rem;
+  }
+  .container .header .purchases .divCart .quantities {
+    bottom: unset;
+    right: unset;
+    bottom: 1.5rem;
+    left: 0.5rem;
+  }
+  .container .header .purchases .imgAvatar {
+    width: 2.8rem;
+  }
+  .container .header .purchases .imgAvatar:hover {
+    border: 2px solid hsl(26deg, 100%, 55%);
+  }
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about .containerDescr {
+    margin-right: 1.63rem;
+    margin-bottom: 2.1rem;
+  }
+  .about .containerDescr .title {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  .about .containerDescr .productDescription {
+    margin-top: 2rem;
+  }
+  .about .products {
+    padding: 4.9rem 3.5rem 5rem 6.4rem;
+  }
+  .about .products .largeProduct {
+    height: unset;
+    width: 92.6%;
+  }
+  .about .products .largeProduct .product {
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 1;
+    transform-origin: center center;
+  }
+  .about .products .largeProduct .icons {
+    display: none;
+  }
+  .about .prices {
+    display: inline-block;
+  }
+  .about .btns {
+    display: flex;
+    align-items: center;
+    padding: unset;
+    height: unset;
+    margin-left: 1.4rem;
+    gap: 0.8rem;
+  }
+  .about .btns .addProducts {
+    width: 30%;
+    padding: unset;
+    justify-content: space-between;
+    padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+  }
+  .about .btns .btnAdd {
+    width: 51.5%;
+    padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+    margin: unset;
+  }
+  .thumbs {
+    margin-top: 1.5rem;
+  }
+  .thumbs .imgsThumbs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .thumbs .imgsThumbs .pics {
+    width: 19.8%;
+    border-radius: 10px;
+  }
+  .thumbs .imgsThumbs .pics img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .thumbs .imgsThumbs .pics img:hover {
+    opacity: 0.7;
+    transition: all 0.5s ease;
+  }
+  .thumbs .imgsThumbs .pics img.chosen {
+    border: 2px solid hsl(26deg, 100%, 55%);
+    opacity: 0.7;
+    transition: all 0.1s ease;
+  }
+  .containerCart {
+    left: unset;
+    top: unset;
+    right: 13rem;
+    top: 6rem;
+    width: 22.4rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .attribution {
+    margin-top: 5rem;
+  }
+}
+.backgroundPage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.backgroundPage .bkgBtnClose img {
+  cursor: pointer;
+  padding: 1rem 1rem 0 1rem;
+  margin-left: 24rem;
+  filter: brightness(300%);
+}
+.backgroundPage .products {
+  width: 30rem;
+  padding: unset;
+}
+.backgroundPage .products .largeProduct .icons {
+  display: flex;
+  position: unset;
+  top: unset;
+  position: absolute;
+  top: 35%;
+}
+.backgroundPage .products .largeProduct .icons .previousIcon:hover, .backgroundPage .products .largeProduct .icons .nextIcon:hover {
+  filter: opacity(0.4) drop-shadow(0 0 0 red);
+}
+.backgroundPage .products .largeProduct .iconNext {
+  right: unset;
+  right: 5%;
+}
+.backgroundPage .products .largeProduct .iconPrevious {
+  left: -3%;
+}
+.backgroundPage.show {
+  display: none;
+}
+
+@media screen and (min-width: 995px) and (max-width: 1439px) {
+  .container {
+    width: 78%;
+    margin: 0 auto;
+  }
+  .container .header {
+    padding: 1.6rem 3.8rem 2rem 3.8rem;
+    border-bottom: 1px solid hsl(220deg, 14%, 75%);
+  }
+  .container .header .menu {
+    z-index: 1;
+  }
+  .container .header .menu .logoImg {
+    width: 7.8rem;
+  }
+  .container .header .menu .hbMenu {
+    display: none;
+  }
+  .container .header .menu .navMenu {
+    display: block;
+    position: unset;
+    height: unset;
+    animation: unset;
+  }
+  .container .header .menu .navMenu .subMenu {
+    width: unset;
+    padding: 0;
+  }
+  .container .header .menu .navMenu .subMenu .iconClose {
+    display: none;
+  }
+  .container .header .menu .navMenu .subMenu ul {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    margin-left: 3.14rem;
+    gap: 1.81rem;
+  }
+  .container .header .menu .navMenu .subMenu ul a {
+    color: hsl(219deg, 9%, 45%);
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+  }
+  .container .header .menu .navMenu .subMenu ul a:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: hsl(26deg, 100%, 55%);
+    position: relative;
+    top: 2.9rem;
+  }
+  .container .header .purchases {
+    gap: 2.5rem;
+  }
+  .container .header .purchases .divCart .quantities {
+    bottom: unset;
+    right: unset;
+    bottom: 1.5rem;
+    left: 0.5rem;
+  }
+  .container .header .purchases .imgAvatar {
+    width: 2.8rem;
+  }
+  .container .header .purchases .imgAvatar:hover {
+    border: 2px solid hsl(26deg, 100%, 55%);
+  }
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about .containerDescr {
+    margin-right: 1.63rem;
+    margin-bottom: 2.1rem;
+  }
+  .about .containerDescr .title {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  .about .containerDescr .productDescription {
+    margin-top: 2rem;
+  }
+  .about .products {
+    padding: 4.9rem 3.5rem 5rem 6.4rem;
+  }
+  .about .products .largeProduct {
+    height: unset;
+    width: 92.6%;
+  }
+  .about .products .largeProduct .product {
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 1;
+    transform-origin: center center;
+  }
+  .about .products .largeProduct .icons {
+    display: none;
+  }
+  .about .prices {
+    display: inline-block;
+  }
+  .about .btns {
+    display: flex;
+    align-items: center;
+    padding: unset;
+    height: unset;
+    margin-left: 1.4rem;
+    gap: 0.8rem;
+  }
+  .about .btns .addProducts {
+    width: 30%;
+    padding: unset;
+    justify-content: space-between;
+    padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+  }
+  .about .btns .btnAdd {
+    width: 51.5%;
+    padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+    margin: unset;
+  }
+  .thumbs {
+    margin-top: 1.5rem;
+  }
+  .thumbs .imgsThumbs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .thumbs .imgsThumbs .pics {
+    width: 19.8%;
+    border-radius: 10px;
+  }
+  .thumbs .imgsThumbs .pics img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .thumbs .imgsThumbs .pics img:hover {
+    opacity: 0.7;
+    transition: all 0.5s ease;
+  }
+  .thumbs .imgsThumbs .pics img.chosen {
+    border: 2px solid hsl(26deg, 100%, 55%);
+    opacity: 0.7;
+    transition: all 0.1s ease;
+  }
+  .containerCart {
+    left: unset;
+    top: unset;
+    right: 13rem;
+    top: 6rem;
+    width: 22.4rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .attribution {
+    margin-top: 5rem;
+  }
+}
+body.dark {
+  background-color: hsl(209deg, 23%, 22%);
+  transition: all 0.5s ease;
+}
+body.dark .hide {
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .title {
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .header .menu .navMenu {
+  background-color: hsla(255deg, 100%, 100%, 0.75);
+}
+body.dark .header .menu .navMenu .subMenu {
+  background-color: hsl(209deg, 23%, 22%);
+}
+body.dark .header .menu .navMenu .subMenu ul {
+  background-color: hsl(209deg, 23%, 22%);
+}
+body.dark .header .menu .navMenu .subMenu ul a {
+  color: hsl(25deg, 100%, 94%);
+}
+body.dark .header .menu .navMenu .iconClose {
+  filter: brightness(2000%);
+}
+body.dark .productDescription {
+  color: hsl(0deg, 0%, 52%);
+}
+body.dark .prices .infosPrice .price {
+  color: hsl(25deg, 100%, 94%);
+}
+body.dark .prices .infosPrice .discount {
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(25deg, 100%, 94%);
+}
+body.dark .imgCart {
+  filter: brightness(2000%);
+}
+body.dark .hbMenu {
+  filter: brightness(2000%);
+}
+body.dark .logoImg {
+  filter: brightness(1500%);
+}
+body.dark .attribution a {
+  color: hsl(25deg, 100%, 94%);
+}
+body.dark .containerCart {
+  background-color: hsl(207deg, 26%, 17%);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+body.dark .containerCart .headerCart {
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .containerCart .empty {
+  color: hsl(25deg, 100%, 94%);
+}
+body.dark .containerCart .nameProduct,
+body.dark .containerCart .priceItem,
+body.dark .containerCart .unitsItem {
+  color: hsl(25deg, 100%, 94%);
+}
+body.dark .containerCart .totalItem {
+  color: unset;
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=main.css.map */

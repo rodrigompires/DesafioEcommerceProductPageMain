@@ -1,0 +1,237 @@
+@media screen and (min-width: 995px) and (max-width: 1439px){
+    .container {
+        width: 78%;
+        margin: 0 auto;
+
+        .header {
+            padding: 1.6rem 3.8rem 2rem 3.8rem;
+            border-bottom: 1px solid $GrayishBlue;
+
+
+            .menu {
+                
+                    z-index: 1;
+                .logoImg {
+                    width: 7.8rem;
+                }
+
+
+                .hbMenu {
+                    display: none;
+                }
+
+                .navMenu {
+                    display: block;
+                    position: unset;
+                    height: unset;
+                    animation: unset;
+                    
+
+                    .subMenu {
+                        width: unset;
+                        padding: 0;
+
+
+                        .iconClose {
+                            display: none;
+                        }
+
+                        ul {
+                            flex-direction: row;
+                            margin: 0;
+                            padding: 0;
+                            font-size: .85rem;
+                            margin-left: 3.14rem;
+                            gap: 1.81rem;
+
+                            
+                            
+
+                            a {
+                                color: $DarkGrayishBlue;
+                                font-weight: 600;
+                                display: block;
+                                text-decoration: none;
+
+                                 &:hover::after {
+                                    content: '';
+                                    display: block;
+                                    height: 3px;
+                                    background-color: $Orange;
+                                    position: relative;
+                                    top: 2.9rem;
+                                    
+                                 }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .purchases {
+                gap: 2.5rem;
+
+                .divCart {
+
+                    .quantities {
+                        bottom: unset;
+                        right: unset;
+                        bottom: 1.5rem;
+                        left: .5rem;
+                    }
+                }
+
+                .imgAvatar {
+                    width: 2.8rem;
+
+                    &:hover {
+                        border: 2px solid $Orange;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .containerDescr {
+            margin-right: 1.63rem;
+            margin-bottom: 2.1rem;
+
+            .title {
+                margin-top: 1rem;
+                font-size: 2.5rem;
+                line-height: 2.8rem;
+
+
+            }
+
+            .productDescription {
+                margin-top: 2rem;
+            }
+        }
+
+
+        .products {
+            padding: 4.9rem 3.5rem 5rem 6.4rem;
+
+
+            .largeProduct {
+                height: unset;
+                width: 92.6%;
+
+
+                .product {
+                    border-radius: 15px;
+                    cursor: pointer;
+                    z-index: 1;
+                    transform-origin: center center;
+                }
+
+
+                .icons {
+                    display: none;
+                }
+
+            }
+
+        }
+
+        .prices {
+            display: inline-block;
+        }
+
+        .btns {
+
+            display: flex;
+            align-items: center;
+            padding: unset;
+            height: unset;
+            margin-left: 1.4rem;
+            gap: .8rem;
+
+
+
+            .addProducts {
+                width: 30%;
+                padding: unset;
+                justify-content: space-between;
+                padding: .9rem .9rem .9rem .9rem;
+            }
+
+            .btnAdd {
+                width: 51.5%;
+                padding: .9rem 1.5rem .9rem 1.5rem;
+
+                margin: unset;
+            }
+        }
+
+    }
+
+    .thumbs {
+        margin-top: 1.5rem;
+
+
+        .imgsThumbs {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .pics {
+                width: 19.8%;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        
+                        opacity: .7;
+                        transition: all .5s ease;
+                    }
+
+                    &.chosen {
+                        border: 2px solid $Orange;
+                        opacity: .7;
+                        transition: all .1s ease;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+    .containerCart {
+        left: unset;
+        top: unset;
+
+
+        right: 13rem;
+        top: 6rem;
+        width: 22.4rem;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+        display: none;
+     
+    }
+
+
+
+    .attribution {
+        margin-top: 5rem;
+    }
+}

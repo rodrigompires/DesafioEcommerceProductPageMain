@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 13.7rem 1.8rem 13.7rem;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.container .header .menu .logo {
+  width: 7.9rem;
+}
+.container .header .purchases {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.container .header .purchases .imgAvatar {
+  width: 2.8rem;
+}
+.container .header .navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 24.7rem;
+  top: 2.2rem;
+}
+.container .header .navMenu .subMenu .iconClose {
+  display: none;
+}
+.container .header .navMenu .subMenu ul {
+  display: flex;
+  list-style: none;
+  gap: 1.82rem;
+}
+.container .header .navMenu .subMenu ul a {
+  text-decoration: none;
+  font-size: 0.86rem;
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 500;
+}
+.container .hbMenu {
+  display: none;
+}
+.container .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  padding: 5.1rem 16.7rem 1.8rem 16.46rem;
+}
+.container .about .products .largeProduct {
+  overflow: hidden;
+  object-fit: contain;
+  width: 106%;
+}
+.container .about .products .largeProduct .product {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+.container .about .products .icons {
+  display: none;
+}
+.container .about .descriptions {
+  border: 1px solid red;
+  margin-left: 250px;
+}
+
+.containerCart {
+  display: none;
+}
+
+.navMenu {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

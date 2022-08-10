@@ -1,0 +1,59 @@
+.attribution {
+    padding: .1rem 1.48rem 1.52rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    color: $GrayishBlue;
+
+    .footer {
+        display: flex;
+        gap: .3rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $VeryVarkBlue;
+    }
+
+    .nameAuthor {
+        
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid $Orange;
+
+        .name {
+            color: $Orange;
+        }
+     
+    }
+
+    .typeAnimation {
+        animation: cursor 400ms steps(10) infinite normal,
+        // typing 4s steps(20) 1s normal backwards;            
+    }
+}
+
+
+// @keyframes typing{
+//     from {
+//         width: 0;
+//     }
+
+//     to {
+//         width: 6.2rem;
+//     }
+// }
+
+@keyframes cursor{
+    from {
+        border-right-color: $Orange;
+    }
+
+    to {
+        border-right-color: transparent;
+
+    }
+}
