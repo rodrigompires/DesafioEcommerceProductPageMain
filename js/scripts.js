@@ -54,7 +54,7 @@ function getIndexImage(e) {
 }
 
 function renderImage(currentSrc) {
-    product.src = `/images/image-product-${currentSrc}.jpg`;
+    product.src = `./images/image-product-${currentSrc}.jpg`;
 }
 
 
@@ -69,7 +69,7 @@ const picThumbs = document.querySelectorAll('.picThumbs');
 picThumbs.forEach(element => {
     element.addEventListener('click', function () {
         let currentSrc = parseFloat(element.src.split('//').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
-        product.src = `/images/image-product-${currentSrc}.jpg`;
+        product.src = `./images/image-product-${currentSrc}.jpg`;
 
     })
 
@@ -237,7 +237,7 @@ function showBackgroundPage() {
     function renderImageProductBkg(e) {
         let bkgSrcImg = e.target.src.split('//').pop().split('/').pop().replace('.jpg', '').replace('image-product-', '').replace('-thumbnail', '');
         const bkgProductImg = backgroundPage.querySelector('.product');
-        bkgProductImg.src = `/images/image-product-${bkgSrcImg}.jpg`;
+        bkgProductImg.src = `./images/image-product-${bkgSrcImg}.jpg`;
     }
 
 
@@ -280,7 +280,7 @@ function showBackgroundPage() {
 
     function renderImageProductBkg2(currentSrcBkg) {
         const bkgProductImg = backgroundPage.querySelector('.product');
-        bkgProductImg.src = `/images/image-product-${currentSrcBkg}.jpg`;
+        bkgProductImg.src = `./images/image-product-${currentSrcBkg}.jpg`;
         chosenPic();
     };
 
